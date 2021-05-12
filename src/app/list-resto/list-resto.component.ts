@@ -12,7 +12,7 @@ export class ListRestoComponent implements OnInit {
   constructor(private resto:RestroService) { }
 
   
-  collections={};
+  collections:any=[];
 
   ngOnInit(): void {
 
@@ -21,8 +21,24 @@ export class ListRestoComponent implements OnInit {
       console.warn(results);
       this.collections=results;
 
+      console.log(this.collections);
     })
     //this.resto.getList();
   }
+
+  deleteResto(item:any){
+   // console.warn(item);
+   this.collections.splice(item-1,1)
+this.resto.deleteResto(item).subscribe((result)=>{
+  console.warn(result);
+})
+  }
+
+  getCurrentResto(item:any){
+  this.resto.getCurrentResto(item).subscribe((result)=>{
+    console.warn(result)
+  })
+  }
+
 
 }

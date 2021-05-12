@@ -7,15 +7,16 @@ import { RegisterRestoComponent } from './register-resto/register-resto.componen
 import { UpdateRestoComponent } from './update-resto/update-resto.component';
 
 const routes: Routes = [
-
   {
     component:AddRestoComponent,
     path:'add'
   },
+
   {
     component:ListRestoComponent,
     path:'list'
   },
+
   {
     component:LoginRestoComponent,
     path:'login'
@@ -26,10 +27,9 @@ const routes: Routes = [
   }, 
   {
     component:UpdateRestoComponent,
-    path:'update'
+    path:'update/:id'
   }
-
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

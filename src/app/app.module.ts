@@ -10,6 +10,7 @@ import { RegisterRestoComponent } from './register-resto/register-resto.componen
 import { UpdateRestoComponent } from './update-resto/update-resto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -26,8 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
-
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
